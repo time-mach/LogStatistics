@@ -1,0 +1,49 @@
+# Project: LogStatistics
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o Tomcat_h.o Tomcat_s.o Weblogic.o JBoss.o Common.o Tomcat_m.o Tomcat.o
+LINKOBJ  = main.o Tomcat_h.o Tomcat_s.o Weblogic.o JBoss.o Common.o Tomcat_m.o Tomcat.o
+LIBS     = -L"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32 -g3
+INCS     = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = StudentsSystem.exe
+CXXFLAGS = $(CXXINCS) -m32 -g3
+CFLAGS   = $(INCS) -m32 -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+Tomcat_h.o: Tomcat_h.c
+	$(CC) -c Tomcat_h.c -o Tomcat_h.o $(CFLAGS)
+
+Tomcat_s.o: Tomcat_s.c
+	$(CC) -c Tomcat_s.c -o Tomcat_s.o $(CFLAGS)
+
+Weblogic.o: Weblogic.c
+	$(CC) -c Weblogic.c -o Weblogic.o $(CFLAGS)
+
+JBoss.o: JBoss.c
+	$(CC) -c JBoss.c -o JBoss.o $(CFLAGS)
+
+Common.o: Common.c
+	$(CC) -c Common.c -o Common.o $(CFLAGS)
+
+Tomcat_m.o: Tomcat_m.c
+	$(CC) -c Tomcat_m.c -o Tomcat_m.o $(CFLAGS)
+
+Tomcat.o: Tomcat.c
+	$(CC) -c Tomcat.c -o Tomcat.o $(CFLAGS)
