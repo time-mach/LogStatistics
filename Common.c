@@ -4,7 +4,7 @@
 void Help() {
 	printf("====================================\n");
 	printf("欢迎使用 平台访问数统计软件\n");
-	printf("Usage: LogStatistics 服务器名[Tomcat|...] 统计方式[-h按时|-m按分|-s按秒] 日志路径 \n");
+	printf("Usage: LogStatistics 服务器名[Tomcat|Nginx|...] 统计方式[-h按时|-m按分|-s按秒] 日志路径 \n");
 	printf("====================================\n");
 }
 

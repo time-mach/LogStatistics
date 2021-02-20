@@ -1,5 +1,5 @@
 [Project]
-FileName=StudentsSystem.dev
+FileName=LogStatistics.dev
 Name=LogStatistics
 Type=1
 Ver=2
@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=3
 CompilerSettings=0000000100000000001000000
-UnitCount=15
+UnitCount=23
 
 [VersionInfo]
 Major=1
@@ -181,7 +181,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit19]
-FileName=Sales.h
+FileName=Nginx_h.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -191,7 +191,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit20]
-FileName=SalesListInitial.h
+FileName=Nginx_m.h
 CompileCpp=0
 Folder=
 Compile=1
@@ -201,7 +201,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit21]
-FileName=SalesListInitial.c
+FileName=Nginx_m.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -211,7 +211,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit16]
-FileName=Tomcat.h
+FileName=Nginx.h
 CompileCpp=0
 Folder=
 Compile=1
@@ -232,6 +232,46 @@ BuildCmd=
 
 [Unit2]
 FileName=Common.h
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit17]
+FileName=Nginx.c
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit18]
+FileName=Nginx_h.h
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit22]
+FileName=Nginx_s.h
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit23]
+FileName=Nginx_s.c
 CompileCpp=0
 Folder=
 Compile=1

@@ -4,12 +4,12 @@
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main.o Tomcat_h.o Tomcat_s.o Weblogic.o JBoss.o Common.o Tomcat_m.o Tomcat.o
-LINKOBJ  = main.o Tomcat_h.o Tomcat_s.o Weblogic.o JBoss.o Common.o Tomcat_m.o Tomcat.o
-LIBS     = -L"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32 -g3
-INCS     = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = StudentsSystem.exe
+OBJ      = main.o Tomcat_h.o Tomcat_s.o Weblogic.o JBoss.o Common.o Tomcat_m.o Tomcat.o Nginx.o Nginx_h.o Nginx_m.o Nginx_s.o
+LINKOBJ  = main.o Tomcat_h.o Tomcat_s.o Weblogic.o JBoss.o Common.o Tomcat_m.o Tomcat.o Nginx.o Nginx_h.o Nginx_m.o Nginx_s.o
+LIBS     = -L"D:/soft/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32 -g3
+INCS     = -I"D:/soft/Dev-Cpp/MinGW64/include" -I"D:/soft/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/soft/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/soft/Dev-Cpp/MinGW64/include" -I"D:/soft/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/soft/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/soft/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = LogStatistics.exe
 CXXFLAGS = $(CXXINCS) -m32 -g3
 CFLAGS   = $(INCS) -m32 -g3
 RM       = rm.exe -f
@@ -47,3 +47,15 @@ Tomcat_m.o: Tomcat_m.c
 
 Tomcat.o: Tomcat.c
 	$(CC) -c Tomcat.c -o Tomcat.o $(CFLAGS)
+
+Nginx.o: Nginx.c
+	$(CC) -c Nginx.c -o Nginx.o $(CFLAGS)
+
+Nginx_h.o: Nginx_h.c
+	$(CC) -c Nginx_h.c -o Nginx_h.o $(CFLAGS)
+
+Nginx_m.o: Nginx_m.c
+	$(CC) -c Nginx_m.c -o Nginx_m.o $(CFLAGS)
+
+Nginx_s.o: Nginx_s.c
+	$(CC) -c Nginx_s.c -o Nginx_s.o $(CFLAGS)

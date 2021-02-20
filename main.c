@@ -1,13 +1,10 @@
-/*
- 本软件由江苏有线苏州分公司石鑫鹏开发，本软件所有源码不可用于任何商业目的，任何转发请标明作者和来源。若有疑问，可邮件联系：kelehaier@126.com
-*/
-
 #include <stdio.h>
 #include <string.h>
 
 #include "Tomcat.h"
 #include "Weblogic.h"
 #include "JBoss.h"
+#include "Nginx.h"
 #include "Common.h"
 
 #define SERVER_LEN 10
@@ -34,6 +31,10 @@ int main(int argc,char *argv[]) //比方输入main.exe Tomcat -h /localhost_access_2
 	if( 0 == strcmp(argv[1], "Tomcat") )
 	{
 		Tomcat(argv[2], argv[3]);
+	}
+	else if( 0 == strcmp(argv[1], "Nginx") )
+	{
+		Nginx(argv[2], argv[3]);
 	}
 	else if( 0 == strcmp(argv[1], "Weblogic") )
 	{
